@@ -2,9 +2,13 @@
 .ipynb_checkpoints
 .DS_Store
 .env
+.idea
 
 # virtual environments
 venv/
 .venv/
 env/
 ENV/
+
+# Folders
+.idea/
