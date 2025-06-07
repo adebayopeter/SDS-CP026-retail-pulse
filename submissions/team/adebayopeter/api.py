@@ -1,3 +1,4 @@
+import os
 from fastapi import FastAPI
 from pydantic import BaseModel
 import joblib
@@ -295,7 +296,8 @@ def predict_customer_cluster(data: ClusterInputData):
 )
 def get_cleaned_data():
     try:
-        df = pd.read_csv("data/cleaned_dataset.csv")  # Ensure correct path
+        file_path = os.path.abspath("data/cleaned_dataset.csv")
+        df = pd.read_csv(file_path)  # Ensure correct path
         return df.to_dict(orient="records")  # Convert DataFrame to JSON
     except FileNotFoundError:
         return {"error": "File not found"}
