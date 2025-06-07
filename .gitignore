@@ -5,10 +5,11 @@
 .idea
 *.csv
 **/*.csv
-
-
 # virtual environments
 venv/
 .venv/
 env/
 ENV/
+
+# Folders
+.idea/
